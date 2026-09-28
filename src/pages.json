@@ -1,0 +1,165 @@
+{
+	"easycom": {
+		"autoscan": true
+	},
+	"pages": [{
+		"path": "pages/index/index",
+		"style": {
+			"navigationStyle": "custom",
+			"usingComponents": {
+				"van-notice-bar": "/wxcomponents/dist/notice-bar/index"
+			}
+		}
+	}, {
+		"path": "pages/service/service",
+		"style": {
+			"navigationBarTitleText": "社区服务"
+		}
+	}, {
+		"path": "pages/convenient/convenient",
+		"style": {
+			"navigationBarTitleText": "便民服务"
+		}
+	}, {
+		"path": "pages/neighbor/neighbor",
+		"style": {
+			"navigationBarTitleText": "邻里圈子"
+		}
+	}, {
+		"path": "pages/mine/mine",
+		"style": {
+			"navigationBarTitleText": "我的"
+		}
+	}, {
+		"path": "pages/login/login",
+		"style": {
+			"navigationBarTitleText": "登录"
+		}
+	}],
+	"subPackages": [{
+		"root": "subPackages/repair",
+		"pages": [{
+			"path": "pages/add",
+			"style": {
+				"navigationBarTitleText": "物业报修"
+			}
+		}, {
+			"path": "pages/list",
+			"style": {
+				"navigationBarTitleText": "我的工单"
+			}
+		}]
+	}, {
+		"root": "subPackages/visitor",
+		"pages": [{
+			"path": "pages/add",
+			"style": {
+				"navigationBarTitleText": "访客预约"
+			}
+		}, {
+			"path": "pages/list",
+			"style": {
+				"navigationBarTitleText": "访客预约记录"
+			}
+		}]
+	}, {
+		"root": "subPackages/vote",
+		"pages": [{
+			"path": "pages/detail",
+			"style": {
+				"navigationBarTitleText": "投票详情"
+			}
+		}, {
+			"path": "pages/record",
+			"style": {
+				"navigationBarTitleText": "投票记录"
+			}
+		}]
+	}, {
+		"root": "subPackages/feedback",
+		"pages": [{
+			"path": "pages/add",
+			"style": {
+				"navigationBarTitleText": "意见反馈"
+			}
+		}]
+	}, {
+		"root": "subPackages/message",
+		"pages": [{
+			"path": "pages/list",
+			"style": {
+				"navigationBarTitleText": "消息通知"
+			}
+		}]
+	}, {
+		"root": "subPackages/notice",
+		"pages": [{
+			"path": "pages/detail",
+			"style": {
+				"navigationBarTitleText": "公告详情"
+			}
+		}]
+	}, {
+		"root": "subPackages/user",
+		"pages": [{
+			"path": "pages/bindHouse",
+			"style": {
+				"navigationBarTitleText": "房屋绑定认证"
+			}
+		}]
+	}, {
+		"root": "subPackages/setting",
+		"pages": [{
+			"path": "pages/setting",
+			"style": {
+				"navigationBarTitleText": "系统设置"
+			}
+		}]
+	}],
+	"preloadRule": {
+		"pages/index/index": {
+			"network": "all",
+			"packages": ["subPackages/feedback", "subPackages/message", "subPackages/notice", "subPackages/repair",
+				"subPackages/setting", "subPackages/user", "subPackages/visitor", "subPackages/vote"
+			]
+		}
+	},
+	"tabBar": {
+		"color": "#9aa5a0",
+		"selectedColor": "#07C160",
+		"backgroundColor": "#ffffff",
+		"borderStyle": "white",
+		"list": [{
+			"text": "首页",
+			"pagePath": "pages/index/index",
+			"iconPath": "/static/icon_tabbar_homeup.png",
+			"selectedIconPath": "/static/ic_tabbar_home_select.png"
+		}, {
+			"text": "社区服务",
+			"pagePath": "pages/service/service",
+			"iconPath": "/static/hearts-line.png",
+			"selectedIconPath": "/static/hearts-line (1).png"
+		}, {
+			"text": "便民服务",
+			"pagePath": "pages/convenient/convenient",
+			"iconPath": "/static/tabbar-icon-dingdan-default (1).png",
+			"selectedIconPath": "/static/tabbar-icon-dingdan-default.png"
+		}, {
+			"text": "邻里圈子",
+			"pagePath": "pages/neighbor/neighbor",
+			"iconPath": "/static/icon_tabbar_xiaoxi_default.png",
+			"selectedIconPath": "/static/icon_tabbar_xiaoxi_default (1).png"
+		}, {
+			"text": "我的",
+			"pagePath": "pages/mine/mine",
+			"iconPath": "/static/icon_tabbar_myup (1).png",
+			"selectedIconPath": "/static/icon_tabbar_myup.png"
+		}]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "富新社区",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F5F7F6"
+	}
+}
